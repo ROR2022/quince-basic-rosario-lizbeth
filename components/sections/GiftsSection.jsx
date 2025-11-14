@@ -118,7 +118,7 @@ export default function GiftsSection() {
                 >
                   <div className="bg-white/70 p-6 rounded-2xl w-64 text-black">
                     <h4 className="text-xl font-medium mb-2">{option.name}</h4>
-                    <p className="text-4xl">{option.icon}</p>
+                    {/* <p className="text-4xl">{option.icon}</p> */}
                     <p className="text-muted">
                       {option.description}
                     </p>
