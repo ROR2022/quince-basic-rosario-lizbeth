@@ -1,0 +1,57 @@
+# Script mejorado para eliminar la función duplicada processConfirmation
+$filePath = "d:\rorProjects\invitaciones\clientes\quinces\basic\quince-basic-new-demo\components\sections\AttendanceConfirmation.tsx"
+
+# Leer todas las líneas del archivo
+$lines = Get-Content $filePath
+
+# Variables para encontrar la función duplicada
+$startLine = -1
+$endLine = -1
+$functionCount = 0
+$braceCount = 0
+$inFunction = $false
+
+# Primero, encontrar la segunda ocurrencia de processConfirmation
+for ($i = 0; $i -lt $lines.Length; $i++) {
+    if ($lines[$i] -match "const processConfirmation = async") {
+        $functionCount++
+        if ($functionCount -eq 2) {
+            $startLine = $i
+            $inFunction = $true
+            $braceCount = 0
+            Write-Host "Segunda función encontrada en línea: $($i + 1)"
+        }
+    }
+    
+    if ($inFunction) {
+        # Contar llaves para encontrar el final de la función
+        $openBraces = ($lines[$i] -split '\{').Length - 1
+        $closeBraces = ($lines[$i] -split '\}').Length - 1
+        $braceCount += $openBraces - $closeBraces
+        
+        # Si las llaves se equilibran, hemos encontrado el final
+        if ($braceCount -eq 0 -and $i -gt $startLine) {
+            $endLine = $i
+            Write-Host "Final de función en línea: $($i + 1)"
+            break
+        }
+    }
+}
+
+if ($startLine -ne -1 -and $endLine -ne -1) {
+    Write-Host "Eliminando líneas desde $($startLine + 1) hasta $($endLine + 1)"
+    
+    # Crear array sin las líneas problemáticas
+    $newLines = @()
+    for ($i = 0; $i -lt $lines.Length; $i++) {
+        if ($i -lt $startLine -or $i -gt $endLine) {
+            $newLines += $lines[$i]
+        }
+    }
+    
+    # Escribir el archivo corregido
+    $newLines | Set-Content $filePath -Encoding UTF8
+    Write-Host "Archivo corregido exitosamente. Líneas totales: $($newLines.Length)"
+} else {
+    Write-Host "No se pudo encontrar la función duplicada completa"
+}
