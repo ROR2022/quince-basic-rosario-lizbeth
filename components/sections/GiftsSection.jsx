@@ -46,7 +46,7 @@ export default function GiftsSection() {
     <section
       ref={sectionRef}
       id="gifts"
-      className="relative py-20 overflow-hidden"
+      className="relative"
     >
       {/* Video de fondo */}
       <video
@@ -102,7 +102,8 @@ export default function GiftsSection() {
             </div>
           </div>
           {/* Cards de opciones con animaciones escalonadas */}
-          <div className="flex flex-wrap justify-center items-center gap-8 mt-8">
+          <div 
+          className="flex flex-wrap justify-center items-center gap-8 mt-8">
             {giftsOptions.map((option, index) => {
               const delays = ['delay-2000', 'delay-3000', 'delay-4000', 'delay-5000', 'delay-6000'];
               const delayClass = delays[index] || 'delay-2000';
@@ -116,7 +117,7 @@ export default function GiftsSection() {
                       : `opacity-0 ${index % 2 === 0 ? '-translate-x-12' : 'translate-x-12'}`
                   }`}
                 >
-                  <div className="bg-white/70 p-6 rounded-2xl w-64 text-black">
+                  <div className=" p-6 rounded-2xl w-64 text-black">
                     <h4 className="text-xl font-medium mb-2">{option.name}</h4>
                     {/* <p className="text-4xl">{option.icon}</p> */}
                     <p className="text-muted">
