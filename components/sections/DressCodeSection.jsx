@@ -129,7 +129,7 @@ export default function DressCodeSection() {
                 ? 'opacity-100 translate-y-0' 
                 : 'opacity-0 translate-y-8'
             }`}
-            style={{ color: '#DC143C' }}
+            style={{ color: '#DC143C', display:'none' }}
           >
             {dressCode.restriction}
           </p>
