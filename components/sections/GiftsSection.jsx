@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Gift } from "lucide-react";
 import { quinceMainData } from "@/components/sections/data/main-data";
+import Image from "next/image";
 
 
 export default function GiftsSection() {
@@ -71,7 +72,7 @@ export default function GiftsSection() {
           }`}>
             <h2 
               style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
-              className="font-main-text text-5xl text-amber-500"
+              className="font-main-text text-5xl text-blue-700"
             >
               Regalo
             </h2>
@@ -84,7 +85,13 @@ export default function GiftsSection() {
               : 'opacity-0 scale-75'
           }`}>
             <div className="bg-muted/50 rounded-2xl p-8 max-w-md mx-auto">
-              <Gift className="w-16 h-16 text-rose-900 mx-auto mb-4" />
+              <Image
+                src='/images/regaloRosario1.jpg'
+                alt="Gift Image"
+                width={200}
+                height={200}
+                className="mx-auto mb-4 rounded-2xl border-4 border-white shadow-lg"
+              />
               <h3 
                 style={{display:'none'}}
                 className="font-script text-3xl text-white mb-4"

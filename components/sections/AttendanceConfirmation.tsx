@@ -758,12 +758,12 @@ ${formData.mensaje ? `ðŸ’Œ *Mensaje especial:*\n${formData.mensaje}` : ""}
             </h3>
 
             <p
-              className={`text-xl bg-slate-300 bg-opacity-60 rounded-2xl p-6 leading-relaxed max-w-lg mx-auto transition-all duration-1000 delay-1000 ${
+              className={`text-xl text-blue-700 bg-slate-300 bg-opacity-60 rounded-2xl p-6 leading-relaxed max-w-lg mx-auto transition-all duration-1000 delay-1000 ${
                 isVisible 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 -translate-y-8'
               }`}
-              style={{ color: '#FFD700' }}
+              //style={{ color: '#FFD700' }}
             >
               ¿Nos acompañaras en este día tan especial?
               <br />
@@ -1063,7 +1063,7 @@ ${formData.mensaje ? `ðŸ’Œ *Mensaje especial:*\n${formData.mensaje}` : ""}
               </Button>
 
               {/* Texto informativo debajo del botÃ³n */}
-              <p className={`mt-4 text-sm opacity-75 text-pink-500 bg-emerald-200 bg-opacity-50 p-4 rounded-xl transition-all duration-1000 delay-8000 ${
+              <p className={`mt-4 text-sm opacity-75 text-blue-700 bg-emerald-200 bg-opacity-50 p-4 rounded-xl transition-all duration-1000 delay-8000 ${
                 isVisible 
                   ? 'opacity-75 translate-y-0' 
                   : 'opacity-0 translate-y-8'

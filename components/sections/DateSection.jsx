@@ -138,7 +138,7 @@ export default function DateSection() {
                 textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
                 //color: '#FFD700' // Dorado
               }}
-              className="font-main-text text-4xl font-bold text-amber-500"
+              className="font-main-text text-4xl font-bold text-blue-700"
             >
               FECHA ESPECIAL
             </h2>
@@ -208,7 +208,7 @@ export default function DateSection() {
           {/* Mensaje final */}
           <div className={getCosmicAnimationClass(cardVisible, 'cosmic-fade-in', 'delay-500')}>
             <h3 
-              className="font-script text-3xl text-amber-500 font-bold"
+              className="font-script text-3xl text-blue-700 font-bold"
               //style={{ color: '#FFD700' }} // Dorado
             >
               {date.mensaje2}

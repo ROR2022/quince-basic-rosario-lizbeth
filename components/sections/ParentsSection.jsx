@@ -57,8 +57,8 @@ export default function ParentsSection() {
     return `${baseClass} ${animClass}`.trim();
   };
   
-  const basicClass="font-main-text text-5xl text-indigo-500 mb-4";
-  const completeClass="font-main-text text-5xl text-indigo-500 mb-4 scale-up-center";
+  const basicClass="font-main-text text-5xl text-blue-700 mb-4";
+  const completeClass="font-main-text text-5xl text-blue-700 mb-4 scale-up-center";
   
 
   return (
@@ -106,7 +106,7 @@ export default function ParentsSection() {
               {/* Mensaje principal con animación */}
               <div 
               className={`flex flex-col items-center justify-center ${getAnimationClass(messageVisible, 'fade-in-up', 'delay-200')}`}>
-                <p className="text-lg italic max-w-2xl mx-auto text-amber-500 font-bold text-glow">
+                <p className="text-lg italic max-w-2xl mx-auto text-blue-700 font-bold text-glow">
                   {parents.message}
                 </p>
               </div>
@@ -157,6 +157,12 @@ export default function ParentsSection() {
                         <span className="text-lg">🤵</span>
                         <p className="text-xl font-medium text-glow text-black">
                           {godparents.godfather}
+                        </p>
+                      </div>
+                      <div className="flex items-center justify-center space-x-2">
+                        <span className="text-lg">👰</span>
+                        <p className="text-xl font-medium text-glow text-black">
+                          Rosa Elena Cadena Guadarrama
                         </p>
                       </div>
                       <div className="flex items-center justify-center space-x-2">

@@ -118,7 +118,7 @@ export default function CeremonySection() {
               {/* Card de Ceremonia - Slide desde izquierda */}
               <div className={getElegantAnimationClass(ceremonyCardVisible, 'card-slide-left', 'delay-400')}>
                 <div className="ceremony-card rounded-2xl p-8 text-center space-y-6 animate-theatrical-glow">
-                  <div className="text-5xl font-main-text mb-4 elegant-text-glow text-amber-500">
+                  <div className="text-5xl font-main-text mb-4 elegant-text-glow text-blue-700">
                     Ceremonia
                   </div>
                   <h4 className={ceremonyCardVisible ? completeClass : basicClass}>
@@ -166,22 +166,22 @@ export default function CeremonySection() {
                   <div className="text-5xl font-main-text mb-4 elegant-text-glow" style={{ color: '#DC143C' }}>
                     Recepción
                   </div>
-                  <h4 className={partyCardVisible ? "text-2xl font-bold text-amber-500 animate-elegant-float" : "text-2xl font-bold text-amber-500"}>
+                  <h4 className={partyCardVisible ? "text-2xl font-bold text-blue-700 animate-elegant-float" : "text-2xl font-bold text-blue-700"}>
                     {party.venue}
                   </h4>
                   <div className="flex items-center justify-center gap-2">
-                    <Clock className="w-6 h-6 text-amber-500" />
-                    <span className="text-2xl font-medium text-amber-500">
+                    <Clock className="w-6 h-6 text-blue-700" />
+                    <span className="text-2xl font-medium text-blue-700">
                       {party.time}
                     </span>
                   </div>
-                  <p className="text-amber-500 font-bold">
+                  <p className="text-blue-700 font-bold">
                     {party.address}
                   </p>
                   <Button
                     onClick={() => window.open(party.ubiLink, "_blank")}
-                    className="text-rose-900 rounded-full px-8 py-3 transform hover:scale-105 transition-all duration-300"
-                    style={{ backgroundColor: '#DC143C', hover: { backgroundColor: '#B22222' } }}
+                    className="text-black rounded-full px-8 py-3 transform hover:scale-105 transition-all duration-300 bg-rose-400"
+                    //style={{ backgroundColor: '#DC143C', hover: { backgroundColor: '#B22222' } }}
                   >
                     <MapPin className="w-4 h-4 mr-2" />
                     Ir al mapa

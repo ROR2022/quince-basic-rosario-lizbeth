@@ -73,7 +73,7 @@ export default function DressCodeSection() {
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Título - Animación desde arriba */}
           <h2 
-            className={`font-main-text text-5xl text-amber-700 transition-all duration-700 ${
+            className={`font-main-text text-5xl text-blue-700 transition-all duration-700 ${
               isVisible 
                 ? 'opacity-100 translate-y-0' 
                 : 'opacity-0 -translate-y-8'
