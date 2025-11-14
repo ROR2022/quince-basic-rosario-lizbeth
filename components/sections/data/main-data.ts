@@ -60,7 +60,7 @@ export const quinceMainData = {
     ceremony: {
       time: "13:45 hrs.",
       venue: "Parroquia de Nuestra Señora de la Candelaria",
-      address: "Hidalgo Manzana 010, Jardines de Mirafuentes, 56641 La Candelaria Tlapala, Méx.",
+      address: "Calle Hidalgo, plaza principal de la candelaria Tlapala, Chalco Edo. México.",
       type: "Misa de Acción de Gracias",
       ubiLink: "https://maps.app.goo.gl/o8smp34zaVQXytrr7",
       ceremonyImage: "/images/quince6.jpeg",
